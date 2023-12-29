@@ -1,0 +1,45 @@
+.logo-version{
+    padding: var(--padding-item);
+    padding-right: 0.25rem;
+    border-radius: var(--radius-item);
+    background-color: var(--bg-item);
+    backdrop-filter: var(--filter-blur);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    gap: 0.25rem;
+    height: 32px;
+    cursor: pointer;
+    transition: var(--transition-025);
+}
+.logo-version:hover{
+    background-color: var(--bg-item-hover);
+}
+.logo-version:hover :where(svg, span){
+    color: var(--color-fonts);
+}
+.logo-version-dropdown{
+    position: absolute;
+    top: 2.5rem;
+    width: max-content;
+    height: 0px;
+    backdrop-filter: var(--filter-blur);
+    background-color: var(--bg-item-hover);
+    border-radius: var(--radius-item);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+.logo-version.active{
+    animation: var(--animation-scale);
+}
+.logo-version.active .logo-version-dropdown{
+    height: 54px;
+    padding: 0.5rem 0.75rem;
+}
+.logo-version.active #versionArrow{
+    transform: rotate(-180deg);
+}

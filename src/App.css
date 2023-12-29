@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900;9..40,1000&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    font-family: 'DM Sans', 'Roboto',  Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+:root{
+    /* Transiciones */
+    --transition-025: all 0.25s ease-in-out;
+    --transition-050: all 0.50s ease-in-out;
+    --transition-075: all 0.75s ease-in-out;
+
+    /* Fuentes */
+    --font-size-small: 0.875rem;
+    --font-size-normal: 1.0rem;
+    --font-size-large: 1.5rem;
+    --font-size-xlarge: 2.5rem;
+
+    /* Contenedores */
+    --max-width: 1280px;
+    --margin: auto;
+    --padding-025: 0.25rem;
+    --padding-050: 0.50rem;
+    --background: rgba(0, 0, 0, 1.0);
+    --bg-item: rgba(38, 38, 38, 0.8);
+    --bg-item-hover: rgba(48, 48, 48, 0.8);
+    --padding-item: 0.25rem 0.5rem;
+    --radius-item: 4px;
+    --filter-blur: blur(15px);
+    --animation-scale: scalecontainer 0.25s ease-in-out;
+
+    /* Colores */
+    --color-fonts: rgb(236, 237, 238);
+    --color-fonts-hover: rgb(187, 192, 195);
+}
+html{
+    scroll-behavior: smooth;
+    color-scheme: dark;
+}
+body{
+    background-color: var(--background);
+    height: 200vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+nav, ul, li{
+    list-style: none;
+    font-size: var(--font-size-normal);
+    transition: var(--transition-025);
+}
+a, abbr{
+    text-decoration: none;
+    font-size: var(--font-size-small);
+    color: var(--color-fonts);
+    font-weight: 400;
+    transition: var(--transition-025);
+}
+img, picture{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+input, button, textarea{
+    border: none;
+    outline: none;
+    background: transparent;
+}
+span, p, b, i{
+    font-size: var(--font-size-small);
+    color: var(--color-fonts-hover);
+    transition: var(--transition-025);
+}
+svg{
+    transition: var(--transition-025);
+    margin-top: 0.1rem;
+    color: var(--color-fonts-hover);
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-clear-button {
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;
+}
