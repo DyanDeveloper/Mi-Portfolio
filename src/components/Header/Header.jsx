@@ -3,10 +3,9 @@ import React, { useState, useEffect } from 'react';
 import logoPath from '../../assets/image/header-logo.png';
 import Version from '../atoms/Version/Version';
 import Socials from '../atoms/Socials/Socials';
+import Navbar from '../Navbar/Navbar';
 
 const Header = () => {
-
-    
 
     const [headerActive, setHeaderActive] = useState(false);
 
@@ -40,31 +39,7 @@ const Header = () => {
                 <div className="header-logo">
                     <img className="logo-image" src={logoPath} alt="dyan developer logo" />
                 </div>
-                <nav id="navApp" className="nav-app">
-                    <ul className="nav-list">
-                        <li className="nav-item">
-                            <a href="#company" className="nav-link">Company</a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="#author" className="nav-link">Author</a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="#projects" className="nav-link">Projects</a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="#clients" className="nav-link">Clients</a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="#clients" className="nav-link">Freelancer</a>
-                        </li>
-                        <li className="nav-item active">
-                            <a href="#clients" className="nav-link active">Giveaways</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <div className="header-side">
-                
+                <Navbar />
             </div>
             <div className="header-side">
                 <Version versionData="Last Version"/>
